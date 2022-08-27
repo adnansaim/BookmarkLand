@@ -1,0 +1,95 @@
+.faq {
+    margin: 8rem 0 10rem 0;
+    text-align: center;
+
+    &_header {
+        font-size: 2rem;
+    }
+
+    &_text {
+        @include subtext;
+        margin-bottom: 4rem;
+    }
+
+    &_questions {
+        width: 40%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 4rem;
+
+        &-devider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(128, 128, 128, .5);
+        }
+
+        .faq_question {
+            border-bottom: 1px solid rgba(128, 128, 128, .5);
+
+            &-head {
+                @include flex(space-between);
+                cursor: pointer;
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 400;
+                    margin: 1.5rem 0;
+                    transition: .15s all ease-in-out;
+                }
+
+                img {
+                    transition: .2s all ease;
+                }
+
+                &:hover h2 {
+                    color: $secondary-color;
+                }
+            }
+
+            p {
+                color: gray;
+                font-size: 18px;
+                line-height: 2.5rem;
+                margin-bottom: 2rem;
+
+                animation: downward .4s;
+            }
+
+            @keyframes downward {
+                from {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes upward {
+                from {
+                    transform: translateY(0);
+                    opacity: .2;
+                }
+
+                to {
+                    transform: translateY(-100%);
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+
+    &_btn {
+        @include overview-btn;
+        font-size: 15px;
+
+        &:hover {
+            background-color: white;
+            color: $primary-color;
+            border: 2px solid $primary-color;
+        }
+    }
+}

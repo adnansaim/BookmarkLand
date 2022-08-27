@@ -1,0 +1,71 @@
+$primary-color: #5266DF;
+$secondary-color: #FA5757;
+
+$font-family: 'Rubik', sans-serif;
+
+@mixin flex($space: space-between) {
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+}
+
+@mixin overview-btn($color: $primary-color, $text: white) {
+    padding: 1rem 2rem;
+    outline: none;
+    cursor: pointer;
+    color: $text;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: .5rem;
+    background-color: $color;
+    border: 2px solid $color;
+    transition: .15s all ease;
+}
+
+.features-current {
+    border-bottom: 4px solid $secondary-color  !important;
+
+}
+
+@mixin subtext {
+    font-size: 18px;
+    width: 40%;
+    margin: auto;
+    color: gray;
+    line-height: 1.8rem;
+}
+
+
+.hide {
+    display: none;
+}
+
+.upside-down {
+    transform: rotate(180deg);
+}
+
+.err-border {
+    border: 2px solid $secondary-color;
+}
+
+
+
+@mixin media-md {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+
+}
+
+@mixin media-l {
+    @media screen and (max-width:856px) {
+        @content;
+    }
+
+}
+
+@mixin media-sml {
+    @media screen and (max-width:690px) {
+        @content
+    }
+}

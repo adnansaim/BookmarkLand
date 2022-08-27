@@ -1,0 +1,68 @@
+.footer {
+    background-color: #242946;
+
+
+    &_container {
+        width: 80%;
+        margin: auto;
+        @include flex(space-between);
+        height: 15vh;
+
+        &-btns {
+            @include flex(space-between);
+
+            img {
+                width: 170px;
+                cursor: pointer;
+            }
+
+            .navs-btns {
+                @extend .nav_items;
+
+                li a {
+
+                    color: white;
+                }
+            }
+        }
+
+        &-links {
+            @include flex(space-between);
+            width: 8%;
+
+
+        }
+    }
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    min-height: 20px;
+    background-size: cover;
+    cursor: pointer;
+    mask-size: cover;
+    transition: .15s all ease;
+
+    &:hover {
+        transform: translateY(-20%);
+    }
+}
+
+.facebook {
+    background-image: url(/images/icon-facebook.svg);
+    height: 24px;
+
+    &:hover {
+        background-image: url(/images/icon-facebook-hover.svg);
+    }
+}
+
+.twitter {
+    background-image: url(/images/icon-twitter.svg);
+
+    &:hover {
+        background-image: url(/images/icon-twitter-hover.svg);
+
+    }
+}

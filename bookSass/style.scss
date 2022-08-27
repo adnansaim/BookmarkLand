@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+@import 'config';
+@import 'nav';
+@import 'overview';
+@import 'features';
+@import 'download';
+@import 'faq';
+@import 'join';
+@import 'footer';
+@import 'responsive';
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+h1,
+h2 {
+    font-weight: 500;
+}
+
+a {
+    font-weight: 400;
+}
